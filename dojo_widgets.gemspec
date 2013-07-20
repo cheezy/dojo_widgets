@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jeff.morgan@leandog.com"]
   gem.description   = %q{Wrapper around dijit controls for use with page-object gem}
   gem.summary       = %q{Wrapper around dijit controls for use with page-object gem}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/cheezy/dojo_widgets"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
