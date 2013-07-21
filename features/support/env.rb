@@ -7,10 +7,27 @@ require 'watir-webdriver'
 
 World(PageObject::PageFactory)
 
-Before do
-  @browser = Watir::Browser.new :firefox
+module PersistentBrowser
+
+  @@browser = false
+
+  def self.get_browser
+    unless @@browser
+      @@browser = Watir::Browser.new :firefox if ENV['DRIVER'] == 'WATIR'
+      @@browser = Selenium::WebDriver.for :firefox if ENV['DRIVER'] == 'SELENIUM'
+    end
+    @@browser
+  end
+
+  def self.quit
+    @@browser.quit
+  end
 end
 
-After do
-  @browser.close
+Before do
+  @browser = PersistentBrowser.get_browser
+end
+
+at_exit do
+  PersistentBrowser.quit
 end
