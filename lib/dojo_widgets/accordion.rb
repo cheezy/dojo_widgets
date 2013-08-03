@@ -2,7 +2,7 @@
 module DojoWidgets
   class Accordion < PageObject::Elements::Div
 
-    def select_panel(label)
+    def select(label)
       span_element(:class => 'dijitAccordionText', :text => label).click
     end
 
