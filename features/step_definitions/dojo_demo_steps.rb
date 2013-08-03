@@ -1,3 +1,4 @@
+
 Given(/^I am on the dojo demo page$/) do
   visit DojoDemoPage
 end

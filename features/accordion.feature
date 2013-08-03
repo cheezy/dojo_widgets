@@ -1,5 +1,6 @@
 Feature: The Accordion Widget
 
+@focus
   Scenario: Selecting a panel from the Accordion
     Given I am on the dojo demo page
     When I select the "Popups and Alerts" Accordion panel
