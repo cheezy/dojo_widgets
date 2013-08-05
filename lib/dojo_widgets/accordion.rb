@@ -7,9 +7,12 @@ module DojoWidgets
     end
 
     def selected?(label)
+      selected == label
+    end
+
+    def selected
       container = div_element(:class => 'dijitSelected')
-      text = container.div_element(:class => 'dijitAccordionTitleFocus').text
-      text == label
+      container.div_element(:class => 'dijitAccordionTitleFocus').text
     end
 
     def panel_for(label)

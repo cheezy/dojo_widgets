@@ -1,5 +1,5 @@
 === Version 0.2
-* Added selected? method to Accordion
+* Added selected? and selected methods to Accordion
 
 === Version 0.1 / 2013-7-20
 * Included basic implementation for the Accordion widget

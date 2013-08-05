@@ -15,3 +15,7 @@ Then(/^I should know that the "(.*?)" panel is selected$/) do |label|
   on(DojoDemoPage).the_accordion.selected?(label).should be_true
 end
 
+Then(/^I should know that the text for the selected panel is "(.*?)"$/) do |label|
+  on(DojoDemoPage).the_accordion.selected.should == label
+end
+
