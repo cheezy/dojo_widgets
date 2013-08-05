@@ -15,7 +15,6 @@ Feature: The Accordion Widget
     When I select the "Color Picker" Accordion panel
     Then I should know that the text for the selected panel is "Color Picker"
 
-@focus
   Scenario: Getting the titles of all of the panels
     Given I am on the dojo demo page
     Then I should know that "Popups and Alerts" is one of the titles
