@@ -19,3 +19,7 @@ Then(/^I should know that the text for the selected panel is "(.*?)"$/) do |labe
   on(DojoDemoPage).the_accordion.selected.should == label
 end
 
+Then(/^I should know that "(.*?)" is one of the titles$/) do |label|
+  on(DojoDemoPage).the_accordion.labels.should include label
+end
+

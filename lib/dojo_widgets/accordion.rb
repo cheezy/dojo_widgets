@@ -15,6 +15,12 @@ module DojoWidgets
       container.div_element(:class => 'dijitAccordionTitleFocus').text
     end
 
+    def labels
+      span_elements(:class => 'dijitAccordionText').collect do |span|
+        span.text
+      end
+    end
+
     def panel_for(label)
       panels = div_elements(:class => 'dijitAccordionInnerContainer')
       the_panel = panels.find do |panel|
