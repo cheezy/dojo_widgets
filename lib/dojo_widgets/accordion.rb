@@ -6,6 +6,12 @@ module DojoWidgets
       span_element(:class => 'dijitAccordionText', :text => label).click
     end
 
+    def selected?(label)
+      container = div_element(:class => 'dijitSelected')
+      text = container.div_element(:class => 'dijitAccordionTitleFocus').text
+      text == label
+    end
+
     def panel_for(label)
       panels = div_elements(:class => 'dijitAccordionInnerContainer')
       the_panel = panels.find do |panel|

@@ -10,3 +10,8 @@ end
 Then(/^the Accordion panel for "(.*?)" should be visible$/) do |label|
   on(DojoDemoPage).the_accordion.panel_for(label).should be_visible
 end
+
+Then(/^I should know that the "(.*?)" panel is selected$/) do |label|
+  on(DojoDemoPage).the_accordion.selected?(label).should be_true
+end
+
