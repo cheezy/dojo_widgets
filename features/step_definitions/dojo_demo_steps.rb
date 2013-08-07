@@ -23,3 +23,10 @@ Then(/^I should know that "(.*?)" is one of the titles$/) do |label|
   on(DojoDemoPage).the_accordion.labels.should include label
 end
 
+When(/^I select the "(.*?)" tab$/) do |label|
+  on(DojoDemoPage).the_tabs.select label
+end
+
+Then(/^I should see the word "(.*?)"$/) do |text|
+  on(DojoDemoPage).text.should include text
+end
