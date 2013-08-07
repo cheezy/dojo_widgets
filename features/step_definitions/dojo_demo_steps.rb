@@ -39,3 +39,6 @@ Then(/^the know that the "(.*?)" tab is selected$/) do |label|
   on(DojoDemoPage).the_tabs.selected?(label).should be_true
 end
 
+Then(/^I should know that "(.*?)" is one of the tabs$/) do |label|
+  on(DojoDemoPage).the_tabs.labels.should include label
+end

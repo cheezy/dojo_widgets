@@ -13,6 +13,10 @@ module DojoWidgets
     def selected?(label)
       selected == label
     end
+
+    def labels
+      span_elements(:class => 'tabLabel').collect { |span| span.text }
+    end
     
   end
 end
