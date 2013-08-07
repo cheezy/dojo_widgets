@@ -9,3 +9,9 @@ Feature: The Tab Widget
     Given I am on the dojo demo page
     When I select the "Select Widgets" tab
     Then the selected tab title should be "Select Widgets"
+
+@focus
+  Scenario: Knowing if a tab is selected
+    Given I am on the dojo demo page
+    When I select the "Select Widgets" tab
+    Then the know that the "Select Widgets" tab is selected

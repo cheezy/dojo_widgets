@@ -9,6 +9,10 @@ module DojoWidgets
     def selected
       div_element(:class => 'dijitTabChecked').text
     end
+
+    def selected?(label)
+      selected == label
+    end
     
   end
 end

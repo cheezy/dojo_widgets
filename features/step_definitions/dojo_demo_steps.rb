@@ -35,3 +35,7 @@ Then(/^the selected tab title should be "(.*?)"$/) do |label|
   on(DojoDemoPage).the_tabs.selected.should == label
 end
 
+Then(/^the know that the "(.*?)" tab is selected$/) do |label|
+  on(DojoDemoPage).the_tabs.selected?(label).should be_true
+end
+
