@@ -1,5 +1,6 @@
 === Version 0.2
 * Added selected?, selected, and labels methods to Accordion
+* Added Tabs widget
 
 === Version 0.1 / 2013-7-20
 * Included basic implementation for the Accordion widget

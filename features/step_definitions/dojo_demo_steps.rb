@@ -30,3 +30,8 @@ end
 Then(/^I should see the word "(.*?)"$/) do |text|
   on(DojoDemoPage).text.should include text
 end
+
+Then(/^the selected tab title should be "(.*?)"$/) do |label|
+  on(DojoDemoPage).the_tabs.selected.should == label
+end
+

@@ -6,6 +6,9 @@ module DojoWidgets
       span_element(:class => 'tabLabel', :text => label).click
     end
 
+    def selected
+      div_element(:class => 'dijitTabChecked').text
+    end
     
   end
 end
